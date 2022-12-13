@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add User</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+
+
+</head>
+
+<body style="color:white ; font-family: Arial, Helvetica, sans-serif; background-color: black;">
+    <center>
+        <h1 style="font-family: showcard gothic;"><a href="/tw/adminHome" style="text-decoration: none; color:white">
+        taxi wala
+        </a></h1>
+        <h3 style="font-family: showcard gothic;">cab data 
+            <style>
+                table,
+                th,
+                td {
+                    border: 0px;
+                    padding: 5px;
+                    border-collapse: collapse;
+                    border-radius: 5px;
+                    background-color: rgb(28, 32, 32);
+                }
+
+                input::placeholder {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            </style>
+        </h3>
+        <p>
+        <table>
+            <form name="loginform"  id="loginform" method="post">
+                <tr>
+                    <td>
+                        <label for="model">Model :</label>
+                    </td>
+                    <td>
+                        <input type="text" id="model" name="model" placeholder="Cab model name"
+                            style="width: 20vw; padding: 5px;" required></br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="numberPlate"> Driver alloted:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="numberPlate" name="numberPlate" placeholder="Number plate"
+                            style="width: 20vw; padding: 5px;" required></br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="price">Price:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="price" name="price" placeholder="Price /Km"
+                            style="width: 20vw; padding: 5px;" required></br>
+                    </td>  
+                <tr>
+        
+                    <td></td>
+                    <td>
+                        <input type="submit" value="save" id="submit" >
+                    </td>
+                    
+                </tr>
+                
+        </table>
+        </p>
+        </form>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+
+</body>
+
+</html>

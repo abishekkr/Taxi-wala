@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>My Ride</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="book.css">
+    <style>
+        body {
+            background-color: black;
+
+
+
+
+        }
+
+        a {
+            box-shadow: inset 0 0 0 0 white;
+            color: #ffffff;
+            margin: 0 -.25rem;
+            padding: 0 .25rem;
+            transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 100px 0 0 0 white;
+            color: rgb(0, 0, 0);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        .row {
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+        }
+
+        .col-sm-4 {
+
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            border-radius: 8px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar" style="border-radius:0%;border:none;background-color: black; color: white;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="landingpage.html" style="box-shadow: none;color:white;">
+                    <h1>My Ride</h1>
+                </a>
+            </div>
+            <ul class="nav navbar-nav out">
+
+
+
+            </ul>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container"
+        style="background-color: white;width:30%;height: 350px; border-radius: 20px ;padding-left: 50px;padding-right: 50px;">
+        <h2><b>Book your ride</b></h2>
+        <form action="" id="lf" method="post"
+            oninput='pk.setCustomValidity(pk.value == ds.value ? "Pickup and destination cannot be same." : "")'>
+            <div class="form-group">
+                <label for="pickup">Pickup:</label>
+                <input type="text" class="form-control" id="pk" placeholder="Enter pickup " name="pickup" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <input type="text" class="form-control" id="ds" placeholder="Enter destination" name="destination"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" class="form-control" id="tm" name="time" required>
+            </div>
+
+
+            <button type="submit" class="btn btn-default" id="btnsub"
+                style="color:white;background-color:black ;margin-left: 40%;margin-top: 2%;border-radius: 20px;padding: 12px;font-size: 12pt;">Book</button>
+
+        </form>
+    </div>
+
+
+
+
+
+    <script>
+
+        var pickup = document.forms['lf']['pk'];
+        var destination = document.forms['lf']['ds'];
+
+        var time = document.forms['lf']['tm'];
+
+        document.querySelectorAll('#lf input').forEach(e => {
+            e.addEventListener('keyup', function (event) {
+                if (!pickup.validity.valid || !destination.validity.valid || !time.validity.valid) {
+                    btnsub.setAttribute('disabled', true)
+
+
+                }
+                else {
+                    btnsub.removeAttribute('disabled', true);
+                }
+            })
+
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+<nav class="navbar" style="border-radius:0%;border:none;background-color: black; color: white;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div style="height:15vh"></div>
+        </div>
+        <ul class="nav navbar-nav out">
+
+
+            <a href="/tw/urHome" style="text-decoration: none;"><h3 style="font-family: arial;">Back Home</h3></a>
+        </ul>
+    </div>
+</nav>
+<h1 class="text-center">Download Receipt</h1>
+<div class="container" id="body">
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Your booking Id :</th>
+            <td>{{this.dataValues.id}}</td>
+        </tr>
+        <tr>
+            <th>PickUp :</th>
+            <td>{{this.dataValues.pickup}}</td>
+        </tr>
+        <tr>
+            <th>Drop :</th>
+            <td>{{this.dataValues.dropoff}}</td>
+        </tr>
+        <tr>
+            <th>Date :</th>
+            <td>{{this.dataValues.date}}</td>
+        </tr>
+        <tr>
+            <th>Time :</th>
+            <td>{{this.dataValues.time}}</td>
+        </tr>
+        <tr>
+            <th>Cab Model :</th>
+            <td>{{this.dataValues.carModel}}</td>
+        </tr>
+        <tr>
+            <th>Price :</th>
+            <td>{{this.dataValues.price}}</td>
+        </tr>
+        <tr>
+            <th>Distance :</th>
+            <td>{{this.dataValues.distance}}</td>
+        </tr>
+        </tr>
+    </table>
+</div>
+<div class="footer">
+    <center><button class="btn btn-primary" id="download-button">Download</button></center>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const button = document.getElementById('download-button');
+    function generatePDF() {
+        // Choose the element that your content will be rendered to.
+        const element = document.getElementById('body');
+        // Choose the element and save the PDF for your user.
+        html2pdf().from(element).save();
+    }
+    button.addEventListener('click', generatePDF);
+</script>

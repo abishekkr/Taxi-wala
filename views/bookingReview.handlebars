@@ -1,0 +1,52 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">    
+<nav class="navbar" style="border-radius:0%;border:none;background-color: black; color: white;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <div style="height:15vh"></div>
+          </div>
+          <ul class="nav navbar-nav out">
+            
+           
+          
+          </ul>
+        </div>
+      </nav>
+<h1 class="text-center">Booking Review</h1>
+<div class="container">
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Your booking Id :</th>
+            <td>{{this.dataValues.id}}</td>
+            </tr>
+            <tr>
+            <th>PickUp :</th>
+            <td>{{this.dataValues.pickup}}</td>
+            </tr>
+            <tr>
+            <th>Drop :</th>
+            <td>{{this.dataValues.dropoff}}</td>
+            </tr>
+            <tr>
+            <th>Date :</th>
+            <td>{{this.dataValues.date}}</td>
+            </tr>
+            <tr>
+            <th>Time :</th>
+            <td>{{this.dataValues.time}}</td>
+            </tr>
+            <tr>
+            <th>Cab Model :</th>
+            <td>{{this.dataValues.carModel}}</td>
+            </tr><tr>
+            <th>Price :</th>
+            <td>{{this.dataValues.price}}</td>
+            </tr><tr>
+            <th>Distance :</th>
+            <td>{{this.dataValues.distance}}</td>
+            </tr>
+        </tr>
+    </table>
+  <center style="display: flex; justify-content:space-around"><a href="/tw/paynow" class="btn btn-primary">Pay Now</a></center>
+</div>
+
+

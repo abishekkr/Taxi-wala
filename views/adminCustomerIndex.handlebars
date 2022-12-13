@@ -1,0 +1,52 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">    
+<nav class="navbar" style="border-radius:0%;border:none;background-color: black; color: white;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="/tw/adminHome" class="navbar-brand" style="color: white;"><h1>Taxi wala</h1></a>
+            <center><h5>Admin Mode</h5></center>
+          </div>
+          <ul class="nav navbar-nav out">
+            
+           
+          
+          </ul>
+        </div>
+      </nav>
+<h1 class="text-center">Users</h1>
+<div class="container">
+    <a href="/tw/adminAddUr" class="btn btn-primary">New User</a>
+   <table class="table table-striped mt-4">
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Zipcode</th>
+            <th>Date of birth</th>
+            <th>Action</th>
+        </tr>
+        {{#each data}}
+        <tr>
+            <td>{{this.dataValues.id}}</td>
+            <td>{{this.dataValues.fname}}</td>
+            <td>{{this.dataValues.lname}}</td>
+            <td>{{this.dataValues.email}}</td>
+            <td>{{this.dataValues.phoneNumber}}</td>
+            <td>{{this.dataValues.street}}</td>
+            <td>{{this.dataValues.city}}</td>
+            <td>{{this.dataValues.zipcode}}</td>
+            <td>{{this.dataValues.dob}}</td>
+            <td>
+                <a href="/tw/editUr/{{this.dataValues.id }}">Edit</a> |
+                <a href="/tw/deleteUr/{{this.dataValues.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+    {{!-- <p class="text-end">You are logged in as: 
+        <b>{{identity.first_name}} {{identity.last_name}}</b>
+    </p> --}}
+</div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Verify User</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+
+    
+</head>
+
+<body style="color:white ; font-family: Arial, Helvetica, sans-serif; background-color: black;">
+    <center>
+        <h1 style="font-family: showcard gothic; margin-top: 15vh"><a href="*"
+                style="text-decoration: none; color:white">Taxi
+                wala</a></h1>
+        <h3 style="font-family: showcard gothic;">User verification
+            <style>
+                table,
+                th,
+                td {
+                    border: 0px;
+                    padding: 5px;
+                    border-collapse: collapse;
+                    border-radius: 5px;
+                    background-color: rgb(28, 32, 32);
+                    margin-top: 10vh;
+                }
+
+                input::placeholder {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            </style>
+        </h3>
+        <p>
+        <table>
+            <form method="POST">
+                <tr>
+                    <td>
+                        <label for="null">Opt has been sent to your Mobile number</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="number" name="otp" placeholder="Enter the otp" maxlength="4" style="width: 20vw;" required>
+                    </td>
+                    <td>
+                        <input type="submit" name="verify" id="verify" value="Verify">
+                    </td>
+                </tr>
+            </form>
+            <tr>
+                <td>    
+                    <form action="/tw/driverVerify">
+                    <button name="button" value="Resend" type="submit" >Resend</button>
+                    </form>
+                </td>
+
+            </tr>
+
+        </table>
+        </p>
+
+        <script type="text/javascript" src="/main.js">
+        
+        </script>
+
+</body>
+
+</html>

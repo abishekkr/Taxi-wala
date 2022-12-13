@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Log In page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: black;
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 100%;
+}
+.topLinks {
+    color: white;
+    font-family: arial;
+    text-decoration: none;
+    margin-left: 100px;
+    width: 10vw;
+    background-color: black;
+    height: 15vh;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.lowerBody {
+    background-color: white;
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+}
+
+.inputRow {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    width: 50vw;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.lowerRight {
+    width: 50vw;
+    height: 75vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.lowerLeft {
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+input:hover {
+    cursor: pointer;
+    border-color: rgb(49, 188, 2);
+    
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/tw/home" style="text-decoration: none;">
+            <h1 style="font-family: showcard gothic; color: white;">Taxi wala</h1>
+        </a>
+        <a href="/tw/ur" style="color: white; text-decoration: none; margin-right:4vw"><h2>Sign Up</h2></a>
+        </div>
+    </div>
+    <div class="lowerBody">
+        <div class="lowerLeft">
+            
+        </div>
+        <div class="lowerRight">
+            <div class="inputRow">
+                
+                <h1 style="color: black; text-align:center;font-family: Arial, Helvetica, sans-serif; font-size: 50px;">
+                    Customer Login</h1>
+            </div>
+            <form method="POST">
+                </br>
+                <div class="inputRow">
+                    <div style="height:30px; width:100px; background-color: white;">
+                        <label style="color: black;font-family: Arial; font-size: 20px;">Email </label>
+                    </div>
+                    <div style="margin-right: 10vw">
+                        <input type="text" name="email" id="email"
+                            style="text-align: center; background-color: white; border-radius: 5px; width: 20vw; padding: 5px;"
+                            placeholder="Ex: name@gmail.com" minlength="8" maxlength="30" required>
+                    </div>
+                </div>
+                </br>
+                <div class="inputRow">
+                    <div style="width: 100px; background-color:white">
+                        <label style="color: black;font-family: Arial; font-size: 20px;">Password </label>
+                    </div>
+                    <div style="margin-right: 10vw">
+                        <input type="password" name="password" minlength="8" maxlength="25" required id="password"
+                            style="text-align: center; background-color: white; border-radius: 5px; width: 20vw;padding: 5px;">
+                    </div>
+                </div>
+                </br>
+                <div class="inputRow">
+                    <div style="background-color: white;">
+                        <input type="checkbox" onclick="showPassword()">Show Password
+                    </div>
+                </div>
+                </br>
+                <div class="inputRow">
+                    </br>
+                    <input type="submit" value="Login" style="background-color: black; color: white; height: 5vh; width: 7vw; border-radius: 5px;">
+                </div>
+                <div class="inputRow">
+                    </br>
+                    <h5 id="error"></h5>
+                </div>
+            </form>
+        </div>
+        <script>
+            function showPassword() {
+                var x = document.getElementById("password");
+                if (x.type == "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+</body>
+
+</html>

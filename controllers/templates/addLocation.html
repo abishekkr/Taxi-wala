@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Add Location</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style>
+    table,
+    th,
+    td {
+        border: 0px;
+        padding: 5px;
+        border-collapse: collapse;
+        border-radius: 5px;
+        background-color: rgb(28, 32, 32);
+        margin-top: 10vh;
+    }
+
+    input::placeholder {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+</head>
+
+<body style="color:white ; font-family: Arial, Helvetica, sans-serif; background-color: black;">
+    <center>
+        <h1 style="font-family: showcard gothic; margin-top: 15vh"><a href="/tw/index"
+                style="text-decoration: none; color:white">Taxi
+                wala</a></h1>
+        <h3 style="font-family: showcard gothic;"> Add a Location</h3>
+        <p>
+        <table>
+            <form method="POST">
+                <tr>
+                    <td><label for="name">Location Name :</label></td>
+                    <td>
+                        <input type="text`" placeholder="Name" name="name" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="latitude">Latitude :</label></td>
+                    <td>
+                        <center><input type="text" name="latitude" placeholder="Enter latitude" id="latitude">
+                        </center>
+                    </td>
+                    
+                </tr>               
+                <tr>
+                    <td><label for="Longitude">Longitude :</label></td>
+                    <td>
+                    <input type="text" placeholder="Enter Longitude" id="longitude" name="longitude">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <center><input type="submit" name="verify" id="verify" style="width:10vw" value="Save"></center>
+                    </td>
+                </tr>
+            </form>
+        </table>
+        </p>
+</body>
+
+</html>

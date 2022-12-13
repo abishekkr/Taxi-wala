@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book now</title>
+    <style>
+        .header {
+            background-color: black;
+            width: 100vw;
+            height: 25vh;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .lowerBody {
+            background-color: white;
+            height: 75vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .searchRow {
+            width: 100vw;
+            height: 10vh;
+            background-color: white;
+            flex-direction: row;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .buttonDiv {
+            background-color: white;
+            height: 10vh;
+            width: 100vw;
+            flex-direction: row;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .searchBox {
+            width: 20vw;
+            height: 10vh;
+            border: none;
+            background-color: black;
+            border-radius: 10px;
+            color: white;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            text-align: center;
+        }
+
+        .searchButton {
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            width: 8vw;
+            height: 6vh;
+
+        }
+
+        .dateTime {
+            width: 20vw;
+            height: 10vh;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.167);
+            border-radius: 10px;
+            font-size: medium;
+            font-family: Arial;
+            display: flex;
+            text-align: center;
+        }
+
+        .submitKey {
+            width: 10vw;
+            height: 8vh;
+            background-color: black;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .topLinks {
+            color: white;
+            font-family: arial;
+            text-decoration: none;
+            margin-left: 100px;
+            width: 10vw;
+            background-color: black;
+            height: 15vh;
+            flex-direction: column;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body style="margin: 0;">
+    <div style="width: 100vw; height: 18vh; background-color:black  ">
+        <div style="width: 88vw; height:18vh; 
+            background-color:black;  display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: space-between;">
+            <a href="/tw/urHome" style="text-decoration: none;">
+                <h1 style="font-family: showcard gothic; color: white;">Taxi wala</h1>
+            </a>
+            <a href="/tw/urProfile" style="color: white; text-decoration: none;margin-left: 5vw;">
+                <h3 style="font-family: arial">View Profile</h3>
+            </a>
+            <a href="/tw/urBookingView" style="color: white; text-decoration: none;">
+                <h3 style="font-family: Arial;">View Booking History</h3>
+            </a>
+        </div>
+    </div>
+    <div class=" lowerBody">
+        <div style="width: 100vw; height: 20vh; background-color: white;"></div>
+        <form method="post">
+            <div class="searchRow">
+                <select name="from" id="from" style="width:15vw; background-color:white;
+            height: 8vh; justify-content: center;display: flex; align-items: center;
+            border: none; background-color: black; border-radius: 5px;margin-left: 3vw; color: white;" required>
+                    <option value="kochi">kochi</option>
+                </select>
+                <div style="width:15vh;margin-left: 5vw; margin-right: 5vw;"></div>
+                <select name="to" id="yo" style="width:15vw; background-color:white;
+            height: 8vh; justify-content: center;display: flex; align-items: center;
+            border: none; background-color: black; border-radius: 5px;margin-left: 3vw; color: white;" required>
+                    <option value="chennai">chennai</option>
+                    <option value="erode">erode</option>
+                </select>
+            </div>
+            <div style="width: 100vw; height: 5vh;"></div>
+            <div class="buttonDiv">
+                <input type="date" id="pdate" name="pdate" class="dateTime" required>
+                <div
+                    style="width:18vw; background-color:white; height: 10vh; justify-content: center; display: flex; align-items: center;">
+                    <input type="submit" id="submit" style="height:8vh; width: 10vw;
+                 border: none; border-radius: 5px;
+                 background-color:rgba(0, 0, 0, 0.509);" value="Get a cab">
+                </div>
+                <input type="time" id="ptime" name="ptime" class="dateTime" required>
+            </div>
+            <div class="buttonDiv">
+                <label for="carModel" style="width:10%; background-color:white;
+            height: 7vh; justify-content: center;display: flex; align-items: center;
+            border: none; background-color: rgba(0, 0, 0, 0.509); border-radius: 5px;"> Select car model : </label>
+                <select name="carModel" id="carModel" style="width:10%; background-color:white;
+             height: 7vh; justify-content: center;display: flex; align-items: center;
+             border: none; background-color: rgba(0, 0, 0, 0.509); border-radius: 5px;margin-left: 3vw;" required>
+                    <option value="swift">Swift</option>
+                    <option value="innova">Innova</option>
+                    <option value="nexon">Nexon</option>
+                </select>
+            </div>
+        </form>
+        <script>
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementsByName("pdate")[0].setAttribute('min', today);
+        </script>
+    </div>
+</body>
+
+
+</html>

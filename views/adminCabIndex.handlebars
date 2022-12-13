@@ -1,0 +1,40 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">    
+<nav class="navbar" style="border-radius:0%;border:none;background-color: black; color: white;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="/tw/adminHome" class="navbar-brand" style="color: white;"><h1>Taxi wala</h1></a>
+            <center><h5>Admin Mode</h5></center>
+          </div>
+          <ul class="nav navbar-nav out">
+            
+           
+          
+          </ul>
+        </div>
+      </nav>
+<h1 class="text-center">Cabs</h1>
+<div class="container">
+    <a href="/tw/adminAddCab" class="btn btn-primary">Add a Cab</a>
+   <table class="table table-striped mt-4">
+        <tr>
+            <th>Id</th>
+            <th>Model</th>
+            <th>Price /KM</th>
+            <th>Action</th>
+        </tr>
+        {{#each data}}
+        <tr>
+            <td>{{this.dataValues.id}}</td>
+            <td>{{this.dataValues.model}}</td>
+            <td>{{this.dataValues.price}}</td>
+            <td>
+                <a href="/tw/editCab/{{this.dataValues.id }}">Edit</a> |
+                <a href="/tw/deleteCab/{{this.dataValues.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+    {{!-- <p class="text-end">You are logged in as: 
+        <b>{{identity.first_name}} {{identity.last_name}}</b>
+    </p> --}}
+</div>

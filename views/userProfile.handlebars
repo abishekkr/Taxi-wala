@@ -1,0 +1,56 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">    
+<nav class="navbar" style="border-radius:0%;border:none;background-color: black; color: white;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <div style="height:15vh"><div style="height: 1vh;"></div>
+              <a href="/tw/urHome" style="text-decoration: none;"><h2 style="font-family: showcard gothic;  color: white; margin-top: 3vh">taxi wala</h2></a>
+            </div>
+          </div>
+          <ul class="nav navbar-nav out">
+            
+           <a href="/tw//urBookingView" class="btn btn-primary">Booking history</a>
+          
+          </ul>
+        </div>
+      </nav>
+<h1 class="text-center">Profile view</h1>
+<div class="container">
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Your user Id :</th>
+            <td>{{this.dataValues.id}}</td>
+            </tr>
+            <tr>
+            <th>First Name :</th>
+            <td>{{this.dataValues.fname}}</td>
+            </tr>
+            <tr>
+            <th>Last Name :</th>
+            <td>{{this.dataValues.lname}}</td>
+            </tr>
+            <tr>
+            <th>Email ID :</th>
+            <td>{{this.dataValues.email}}</td>
+            </tr>
+            <tr>
+            <th>Phone Number :</th>
+            <td>{{this.dataValues.phoneNumber}}</td>
+            </tr>
+            <tr>
+            <th>Street :</th>
+            <td>{{this.dataValues.street}}</td>
+            </tr><tr>
+            <th>City :</th>
+            <td>{{this.dataValues.city}}</td>
+            </tr><tr>
+            <th>Zipcode :</th>
+            <td>{{this.dataValues.zipcode}}</td>
+            </tr>
+        </tr>
+        <tr>
+            <th>Edit your Data :</th>
+            <td><a href="/tw/urProfileEdit" class="btn btn-primary">Click here</a></td>
+        </tr>
+    </table>
+<center style="display: flex; justify-content:row-reverse"><a href="/tw/urLogout" class="btn btn-primary">Sign Out</a></center>
+</div>

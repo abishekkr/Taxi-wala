@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Log In page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: black;
+            width: 100vw;
+            height: 25vh;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 100%;
+        }
+        .topLinks {
+            color: white;
+            font-family: arial;
+            text-decoration: none;
+            margin-left: 100px;
+            width: 10vw;
+            background-color: black;
+            height: 15vh;
+            flex-direction: column;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        .lowerBody {
+            background-color: white;
+            height: 75vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: space-around;
+        }
+        .inputRow {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: white;
+            width: 50vw;
+            align-content: center;
+            vertical-align: middle;
+        }
+        .lowerRight {
+            width: 50vw;
+            height: 75vh;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-around;
+        }
+        .lowerLeft {
+            width: 50vw;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+        input:hover {
+            cursor: pointer;
+            border-color: rgb(49, 188, 2);
+
+        }
+        a:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.435);
+            
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="header">
+        <a href="/tw/adminHome" style="text-decoration: none;">
+            <h1 style="font-family: showcard gothic; color: white;">Taxi wala</h1>
+        </a>
+        <a href="/tw/adminLogout" style="color: white; text-decoration: none; margin-right:4vw"><h2>Logout</h2></a>
+    </div>
+    </div>
+    <div class="lowerBody">
+        <div class="lowerLeft">
+        </div>
+        <div class="lowerRight">
+          <center>  <a href="/tw/adminCustomer" style="text-decoration: none; font-size: 5vh; color: black;">Customer Database</a><br><br><br>
+            <a href="/tw/adminDriver" style="text-decoration: none;  font-size: 5vh;color: black;">Driver Database</a><br><br><br>
+            <a href="/tw/adminCab" style="text-decoration: none;  font-size: 5vh;color: black;">Cab Database</a><br><br><br>
+        <a href="/tw/adminBooking" style="text-decoration: none;  font-size: 5vh;color: black;">Booking database</a></center>
+        </div>
+    
+</body>
+
+</html>

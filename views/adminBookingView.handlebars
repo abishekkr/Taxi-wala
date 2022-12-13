@@ -1,0 +1,44 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">    
+<nav class="navbar" style="border-radius:0%;border:none;background-color: black; color: white;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="/tw/adminHome" class="navbar-brand" style="color: white;"><h1>Taxi wala</h1></a>
+    
+          </div>
+          <ul class="nav navbar-nav out">
+            
+           
+          
+          </ul>
+        </div>
+      </nav>
+<h1 class="text-center">Users</h1>
+<div class="container">
+    
+   <table class="table table-striped mt-4">
+        <tr>
+            <th>Booking Id</th>
+            <th>Pick UP</th>
+            <th>Drop</th>
+            <th>Date</th>
+            <th>Car Model</th>
+            <th>Price</th>
+            <th>Download a copy</th>
+        </tr>
+        {{#each data}}
+        <tr>
+            <td>{{this.dataValues.id}}</td>
+            <td>{{this.dataValues.pickup}}</td>
+            <td>{{this.dataValues.dropoff}}</td>
+            <td>{{this.dataValues.date}}</td>
+            <td>{{this.dataValues.carModel}}</td>
+            <td>{{this.dataValues.price}}</td>
+    
+            <td>
+                <a href="/tw/urDownloadOlBooking/{{this.dataValues.id }}" target="_blank">Download Receipt</a> 
+                
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
